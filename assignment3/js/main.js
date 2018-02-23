@@ -29,11 +29,7 @@ window.onload = function() {
         //Creates a sprite for the player character
         player = game.add.sprite(0, game.world.height/2, 'dude');
         door = game.add.audio('door');
-        /*
-        let random = new Phaser.RandomDataGenerator();
-        let circleX = Phaser.RandomDataGenerator.between(0, game.world.width);
-        let circleY = Phaser.RandomDataGenerator.between(0, game.world.height);
-        */
+        
 
         searchlight1 = game.add.graphics(game.world.centerX, game.world.centerY);
         searchlight1.beginFill(0xFAFFAF);
@@ -112,14 +108,10 @@ window.onload = function() {
         if (cursors.up.isDown) {
             //  Move up
             player.body.velocity.y = -(playerMovementSpeed);
-
-            //player.animations.play('left');
         }
         else if (cursors.down.isDown) {
             //  Move down
             player.body.velocity.y = playerMovementSpeed;
-
-            //player.animations.play('right');
         }
         //This code block contains a modified version of code borrowed from http://phaser.io/examples/v2/arcade-physics/sprite-vs-sprite
         {
