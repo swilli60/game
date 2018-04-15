@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Assignment 5</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Assignment 7: Find the Circles!</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+The idea of finding objects hidden behind an opaque cover.
+</li>
+
+<li><strong>Technical Merit:</strong>
+It's enjoyable to experience the surprise of finding a circle and hearing the DING! when I find a circle.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+Probably the hardest thing that I had to deal with was learning the hard way that Arcade physics were not the way to go with this. I wasted way too much time trying to make that work.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+<ul>
+<li>Loading screen: Provided by the given template</li>
+<li><a href="http://weclipart.com/gimg/4B744B985EE71DC2/start-button-png-hi.png">Start Button</a></li>
+<li>Menu Background: <a href="https://www.downtothere.com/circles/">downtothere.com</a></li>
+<li>Dinging sound: <a href="https://www.myinstants.com/instant/ding-sound-effect/">www.myinstants.com</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+I took some inspiration from <a href="http://phaser.io/examples/v2/bitmapdata/alpha-mask">Phaser Mask Examples</a>
+</li>
+
+<li><strong>High Concept:</strong>
+A fun, quick game mostly involving chance, but with a slight bit of strategy to it.
+</li>
+
+<li><strong>Theme:</strong>
+No theme used this week, since it was stated as being optional.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+The locations of the four circles the players are looking for are randomly chosen.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+I mainly wanted to evaluate the idea of revealing items that were hidden
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want players to experience that little tinge of excitement when they hear the ding and realize they beat their opponent to finding a circle.
+</li>
+
+<li><strong>Gameplay:</strong>
+This is a two-player game. Players share the mouse. Once one of the players clicks the start button, players are faced with a mostly blank screen at first. Each turn, players must make two separate mouse clicks to indicate a line of the area of the game board they wish to reveal. There are four circles with varying point values to be found. The smaller the circle, the higher the point value as well as the difficulty of finding it. Points are only awarded for being the first player to discover a particular circle. Once all circles have been found, the game ends and gives players the choice to click and play again, though that part is a little glitchy. Reloading the page is best after completing a game.
+</li>
+
+<li><strong>Strategies:</strong>
+Bearing in mind that the circles will never overlap, it is in the players' best interest to try to avoid intersecting portions of revealed circles with their lines so they can reveal a larger area which might contain a new, undiscovered circle.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+There is not any realy plot or story. Just a simple game of looking for hidden circles.
+</li>
+
+<li><strong>Target Audience:</strong>
+I feel this game is best geared at people who enjoy games like tetris or other relavtively simple (though sometimes still challenging) games.
+</li>
+
+<li><strong>Play Time:</strong>
+The intended play time is perhaps 1-2 minutes.
+</li>
+
+</ul>
+</div>
+</body>
+</html>
