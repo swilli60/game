@@ -61,9 +61,12 @@ GameStates.makeMainMenu = function( game, shared ) {
             textBox.data.anchor.setTo(0.5, 0.5);
 
             
+            
             style = { font: "20px Verdana", fill: "#FFFFFF", align: "center", wordWrap: true, wordWrapWidth: game.world.width };
-            let instructions = game.add.text(game.world.centerX, 585, "Use left and right arrows to navigate instructions.", style);
-            instructions.anchor.setTo(0.5, 0.5);
+            let menuInstructions1 = game.add.text(game.world.centerX, 585, "Use left and right arrows to navigate menu text.", style);
+            menuInstructions1.anchor.setTo(0.5, 0.5);
+            style = { font: "20px Verdana", fill: "#FFFFFF", align: "left", wordWrap: true, wordWrapWidth: game.world.width };
+            let menuInstructions2 = game.add.text(5, 460, "Instructions: Press I\nBackground Story: Press S\nControls: Press C", style);
 
             keys = game.input.keyboard.addKeys({'controls': Phaser.KeyCode.C, 'story': Phaser.KeyCode.S, 'instructions': Phaser.KeyCode.I, 'prev': Phaser.KeyCode.LEFT, 'next': Phaser.KeyCode.RIGHT});
             description = story;
@@ -73,6 +76,7 @@ GameStates.makeMainMenu = function( game, shared ) {
             if (keys.controls.justDown) {
                 //tell player the controls
                 description = controls;
+                subText = "Controls";
                 textBox.data.text = description[0];
                 descriptionIndex = 0;
             }
