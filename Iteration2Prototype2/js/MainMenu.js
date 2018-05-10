@@ -76,19 +76,21 @@ GameStates.makeMainMenu = function( game, shared ) {
             if (keys.controls.justDown) {
                 //tell player the controls
                 description = controls;
-                subText = "Controls";
+                titleSubText.setText("Controls");
                 textBox.data.text = description[0];
                 descriptionIndex = 0;
             }
             if (keys.story.justDown) {
                 //tell player the background story
                 description = story;
+                titleSubText.setText("The Story");
                 textBox.data.text = description[0];
                 descriptionIndex = 0;
             }
             if (keys.instructions.justDown) {
                 //tell player how to play
                 description = instructions;
+                titleSubText.setText("How to play");
                 textBox.data.text = description[0];
                 descriptionIndex = 0;
             }
