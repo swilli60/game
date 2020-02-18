@@ -1,8 +1,17 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>CS325 Game Prototypes</title>
+	<meta charset="UTF-8" />
+	<title>Find the Circles!</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
 
 <style>
 body
@@ -18,33 +27,34 @@ body
 
 </head>
 <body>
-
-<h1>CS 325 Game Prototypes</h1>
-
-<p>I am making creative and experimental game prototypes! Here is the list of them:
-
-<ol>
-<li>Digital Assignment 1 (pass)</li>
-<li>Digital Assignment 2 (pass)</li>
-<li><a href="assignment3">Digital Assignment 3</a></li>
-<li><a href="assignment4">Digital Assignment 4</a></li>
-<li><a href="assignment5">Digital Assignment 5</a></li>
-<li>Digital Assignment 6 (Iteration Sequence 1, Prototype 1) [Not turned in]</li>
-<li><a href="Iteration1Prototype2">Digital Assignment 7 (Iteration Sequence 1, Prototype 2)</a></li>
-<li><a href="Iteration2Prototype1">Digital Assignment 8 (Iteration Sequence 2, Prototype 1)</a></li>
-<li><a href="Iteration2Prototype2">Digital Assignment 8 (Iteration Sequence 2, Prototype 2) [Incomplete, but can be graded if I'm out of time to improve it further]</a></li>
-</ol>
-
-
-<p>Here are the templates:
-
+<div id="game"></div>
+<div id="readme">
+<h2>Game Prototype: Find the Circles!</h2>
+<h3>by Scott Williams</h3><br/>
+<h3>About this game:</h3>
 <ul>
-<li><a href="template-minimal">A minimal template</a></li>
-<li><a href="template-minimal-gamestate">A minimal template that uses game states</a></li>
-<li><a href="template-tilemap">A minimal template using tile maps</a></li>
-<li><a href="template-gamestate-functional">A template with multiple game states (loading screen, main menu)</a></li>
-<li><a href="template-gamestate">A template with multiple game states in a different style</a></li>
-</ul>
 
+<li>This game was created for a computer game design class in which I was tasked with creating several video game prototypes over the course of the semester. This simple prototype is the one I am most proud of, as it was the one which felt most complete. It is the most complete one because I was able to put the most time into it and really had the time to dig into some of the features of Phaser, the game engine, such as drawing various geometries on screen and applying some of them to an alpha channel mask.
+</li><br/>
+
+<li><strong>Gameplay:</strong> This is a two-player game. Players share the mouse. Once one of the players clicks the start button, players are faced with a mostly blank screen at first. Each turn, players must make two separate mouse clicks to indicate a line of the area of the game board they wish to reveal. There are four circles with varying point values to be found. The smaller the circle, the higher the point value as well as the difficulty of finding it. Points are only awarded for being the first player to discover a particular circle. Once all circles have been found, the game ends and gives players the choice to click and play again, though that part is a little glitchy. Reloading the page is best after completing a game.
+</li><br/>
+
+<li><strong>Experience Gained: </strong>In the class I made this game for, the class was largely left to their own devices to learn Javascript, some HTML basics, and the Phaser API if they were not already known (and indeed I did not know how to use any of these initially). This game prototype and the others I made in that class helped me develop my skills not just with the aformentioned languages and APIs themselves, but more importantly with learning how to more rapidly aquire new programming languages, APIs, and become familiar with unfamiliar codebases in the future, particularly through reading documentation and through code reading.
+</li><br/>
+
+<li><strong>Game Engine: </strong> <a href="https://phaser.io/">Phaser</a>, a Javascript-based engine for creating in-browser games
+</li><br/>
+
+<li><strong>Prototype Assets:</strong>
+<ul>
+<li><a href="http://weclipart.com/gimg/4B744B985EE71DC2/start-button-png-hi.png">Start Button</a></li>
+<li>Menu Background: <a href="https://www.downtothere.com/circles/">downtothere.com</a></li>
+<li>Dinging sound: <a href="https://www.myinstants.com/instant/ding-sound-effect/">www.myinstants.com</a></li>
+</ul>
+</li>
+
+</ul>
+</div>
 </body>
 </html>
